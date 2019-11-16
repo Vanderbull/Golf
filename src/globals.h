@@ -1,13 +1,14 @@
 #include <iostream>
-//#include "funktioner.h"
 #include <fstream>
 #include <string>
 #include <math.h>
 #include <time.h>
+
+// Replace these SDL files with the correct includes for SDL 2.0
 #include "SDL_mixer.h"
 #include "SDL.h"
 
-
+// Replace these LIB files with the correct library files for SDL 2.0 or remove them 
 #pragma comment(lib,"SDL.lib")
 #pragma comment(lib,"SDLmain.lib")
 #pragma comment(lib,"SDL_mixer.lib")
@@ -19,19 +20,20 @@ class Sound
 public:
 	Sound();
 	~Sound();
-	void Three();
+	void Tree();
+	//	void Three();
 	void Water();
 	void Hole();
 	void Putter();
 	void Driver();
 
 private:
-	Mix_Chunk *three;
+	Mix_Chunk *tree;
+	//	Mix_Chunk *three;
 	Mix_Chunk *water;
 	Mix_Chunk *hole;
 	Mix_Chunk *putter;
 	Mix_Chunk *driver;
-	
 };
 
 struct Surf
@@ -42,12 +44,15 @@ struct Surf
 	SDL_Surface* image;
 	SDL_Surface* golfimage;
 	SDL_Surface* initPlayer;
-	SDL_Surface* matare;
+	SDL_Surface *gauge;
+	//	SDL_Surface* matare;
 	SDL_Surface *bird;
 	SDL_Surface *golfer;
 	SDL_Surface* varde;
-	SDL_Surface* vind;
-	SDL_Surface *gFont;
+	SDL_Surface *wind;
+	//	SDL_Surface* vind;
+	SDL_Surface *font;
+	//	SDL_Surface *gFont;
 };
 
 struct Bools
@@ -63,12 +68,11 @@ struct Bools
 	bool pickClub;
 	bool ground;
 	bool power;
-	//bool done; 
 	bool Rmove;
 	Bools();
 };
 
-
+// Get rid of these abominations
 extern float hojd1;
 extern float bredd1;
 extern int bredd;

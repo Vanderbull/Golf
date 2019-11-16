@@ -1,15 +1,10 @@
 #include "Globals.h"
 
-
 float hojd1=0;
 float bredd1=0;
 int bredd;
 int hojd;
 
-//SDL_Surface* screen;
-//SDL_Surface* image;
-//SDL_Surface* golfimage;
-//SDL_Surface* initPlayer;
 Surf surf;
 Sound snd;
 
@@ -22,7 +17,6 @@ Sound::Sound()
 	Uint16 audio_format = AUDIO_S16SYS;
 	int audio_channels = 2;
 	int audio_buffers = 512;
-
 
 	if(Mix_OpenAudio(audio_rate, audio_format, audio_channels, audio_buffers) != 0) 
 	{
